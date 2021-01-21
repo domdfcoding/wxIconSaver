@@ -1,5 +1,5 @@
 modname: "wxIconSaver"
-copyright_years: "2019-2020"
+copyright_years: "2019-2021"
 author: "Dominic Davis-Foster"
 email: "dominic@davis-foster.co.uk"
 version: "0.1.7"
@@ -32,7 +32,6 @@ console_scripts:
   - 'wxIconSaver=wxIconSaver:main'
   - 'wxiconsaver=wxIconSaver:main'
 
-
 keywords:
   - wxpython
   - icons
@@ -48,3 +47,9 @@ desktopfile:
 
 sphinx_html_theme: furo
 standalone_contrib_guide: true
+
+intersphinx_mapping:
+ - "'wxpython': ('https://docs.wxpython.org/', None)"
+
+extra_sphinx_extensions:
+  - enum_tools.autoenum

@@ -5,7 +5,7 @@
 wxPython GUI for saving icons to files.
 """
 #
-#  Copyright (c) 2019-2020 Dominic Davis-Foster <dominic@davis-foster.co.uk>
+#  Copyright (c) 2019-2021 Dominic Davis-Foster <dominic@davis-foster.co.uk>
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -35,8 +35,11 @@ __all__ = ["BitmapSaver", "main"]
 
 
 class BitmapSaver(wx.App):
+	"""
+	The main application class.
+	"""
 
-	def OnInit(self):
+	def OnInit(self):  # noqa: D102
 		self.frame = BitmapSaverFrame(None, wx.ID_ANY, '')
 		self.SetTopWindow(self.frame)
 		self.frame.Show()
@@ -46,7 +49,7 @@ class BitmapSaver(wx.App):
 # end of class BitmapSaver
 
 
-def main():
+def main():  # noqa: D103
 	app = BitmapSaver(0)
 	app.MainLoop()
 

@@ -134,6 +134,7 @@ Installation
 	:caption: Documentation
 
 	usage
+	api
 	contributing
 	Source
 

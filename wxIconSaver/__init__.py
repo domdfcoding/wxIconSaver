@@ -5,7 +5,7 @@
 wxPython GUI for saving icons to files.
 """
 #
-#  Copyright (c) 2019-2020 Dominic Davis-Foster <dominic@davis-foster.co.uk>
+#  Copyright (c) 2019-2021 Dominic Davis-Foster <dominic@davis-foster.co.uk>
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ import os
 # 3rd party
 import wx  # type: ignore
 
-__all__ = ["FileTypesEnum", "BitmapSaverFrame"]
+__all__ = ["BUILTIN_ICONS", "ART_PROVIDERS", "FileTypesEnum", "BitmapSaverFrame"]
 
 # begin wxGlade: dependencies
 # end wxGlade
@@ -47,9 +47,8 @@ __all__ = ["FileTypesEnum", "BitmapSaverFrame"]
 # begin wxGlade: extracode
 # end wxGlade
 
-wxWindowID = int
-
-builtin_icons = [
+#: A list of wxPython's builtin icons.
+BUILTIN_ICONS = [
 		"ART_ADD_BOOKMARK",
 		"ART_CDROM",
 		"ART_CLOSE",
@@ -104,7 +103,8 @@ builtin_icons = [
 		"ART_WARNING",
 		]
 
-artproviders = [
+#: A list of wxPython's art providers.
+ART_PROVIDERS = [
 		"ART_TOOLBAR",
 		"ART_MENU",
 		"ART_BUTTON",
@@ -118,7 +118,7 @@ artproviders = [
 
 class FileTypesEnum(enum.Enum):
 	"""
-	An enumeration for supported filetypes
+	An enumeration for supported filetypes.
 	"""
 
 	# TODO: use autonumber enum for indices
@@ -152,7 +152,7 @@ class FileTypesEnum(enum.Enum):
 	def __init__(self, *vals):
 		pass
 
-	def __new__(cls, ftype, index, extension, filetype_string):
+	def __new__(cls, ftype, index, extension, filetype_string):  # noqa: D102
 		obj = object.__new__(cls)
 		# index is canonical value
 		obj._value_ = index
@@ -170,11 +170,26 @@ class FileTypesEnum(enum.Enum):
 
 
 class BitmapSaverFrame(wx.Frame):
+	"""
+	Frame for configuring the bitmap icon to be saved.
+
+	:param parent: The parent window. This may be, and often is, :py:obj:`None`.
+		If it is not :py:obj:`None`, the frame will be minimized when its parent is minimized and restored
+		when it is restored (although it will still be possible to minimize and restore just this frame itself).
+	:param id: The window identifier.
+	:param title: The caption to be displayed on the frame's title bar.
+	:param pos: The window position. The value :py:obj:`wx.DefaultPosition` indicates a default position,
+		chosen by either the windowing system or wxWidgets, depending on the platform.
+	:param size: The window size. The value :py:obj:`wx.DefaultSize` indicates a default size,
+		chosen by either the windowing system or wxWidgets, depending on the platform.
+	:param style: The `window style <https://docs.wxpython.org/wx.Frame.html#styles-window-styles>`_.
+	:param name: The name of the frame. This parameter is used to associate a name with the frame.
+	"""
 
 	def __init__(
 			self,
-			parent,
-			id: wxWindowID = wx.ID_ANY,
+			parent: wx.Window,
+			id: int = wx.ID_ANY,  # noqa: A002  # pylint: disable=redefined-builtin
 			title: str = '',
 			pos: wx.Point = wx.DefaultPosition,
 			size: wx.Size = wx.DefaultSize,
@@ -229,11 +244,11 @@ class BitmapSaverFrame(wx.Frame):
 		self.filename: str = ''
 
 		self.icon_list_box.Clear()
-		self.icon_list_box.AppendItems(builtin_icons)
+		self.icon_list_box.AppendItems(BUILTIN_ICONS)
 
 		self.icon_list_box.SetSelection(0)
 		self.provider_list_box.Clear()
-		self.provider_list_box.AppendItems(artproviders)
+		self.provider_list_box.AppendItems(ART_PROVIDERS)
 
 		self.provider_list_box.SetSelection(0)
 		self.filetype_list_box.Clear()
@@ -288,10 +303,20 @@ class BitmapSaverFrame(wx.Frame):
 		# sizer_5.AddStretchSpacer()
 		self.preview_bitmap = preview_bitmap
 
-	def on_close(self, _) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>
+	def on_close(self, *events) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>
+		"""
+		Close the window.
+		"""
+
 		self.Close()
 
 	def on_save(self, event: wx.Event) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>
+		"""
+		Save the icon with the current settings.
+
+		:param event:
+		"""
+
 		self.update_preview(self, event)
 
 		# from https://wxpython.org/Phoenix/docs/html/wx.FileDialog.html
@@ -321,7 +346,10 @@ class BitmapSaverFrame(wx.Frame):
 
 		event.Skip()
 
-	def update_preview(self, *_) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>
+	def update_preview(self, *events) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>
+		"""
+		Update the preview image.
+		"""
 
 		self.size = int(self.size_spin_ctrl.GetValue())
 		self.icon = bytes(f"wx{self.icon_list_box.GetString(self.icon_list_box.GetSelection())}", "utf-8")
