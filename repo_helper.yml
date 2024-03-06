@@ -53,3 +53,6 @@ intersphinx_mapping:
 
 extra_sphinx_extensions:
   - enum_tools.autoenum
+
+tox_unmanaged:
+  - testenv
