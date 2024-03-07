@@ -56,8 +56,8 @@ wxIconSaver
 	:target: https://github.com/domdfcoding/wxIconSaver/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://requires.io/github/domdfcoding/wxIconSaver/requirements.svg?branch=master
-	:target: https://requires.io/github/domdfcoding/wxIconSaver/requirements/?branch=master
+.. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/wxIconSaver/badge.svg
+	:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/wxIconSaver/
 	:alt: Requirements Status
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/wxIconSaver?logo=codefactor
@@ -95,7 +95,7 @@ wxIconSaver
 	:target: https://github.com/domdfcoding/wxIconSaver/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2021
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2024
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wxIconSaver

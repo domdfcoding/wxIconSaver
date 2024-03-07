@@ -5,6 +5,7 @@ wxIconSaver
 .. start short_desc
 
 .. documentation-summary::
+	:meta:
 
 .. end short_desc
 
@@ -100,7 +101,7 @@ wxIconSaver
 		:last-commit:
 		:alt: GitHub last commit
 
-	.. |maintained| maintained-shield:: 2021
+	.. |maintained| maintained-shield:: 2024
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
@@ -138,6 +139,12 @@ Installation
 	contributing
 	Source
 	license
+
+.. sidebar-links::
+	:caption: Links
+	:github:
+	:pypi: wxIconSaver
+
 
 .. start links
 
