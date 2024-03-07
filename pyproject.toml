@@ -7,9 +7,8 @@ name = "wxIconSaver"
 version = "0.1.7"
 description = "wxPython GUI for saving icons to files."
 readme = "README.rst"
-keywords = [ "gui", "icons", "utility", "wxpython",]
-dynamic = [ "dependencies",]
 requires-python = ">=3.6.1"
+keywords = [ "gui", "icons", "utility", "wxpython",]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -24,6 +23,7 @@ classifiers = [
     "Topic :: Utilities",
     "Typing :: Typed",
 ]
+dynamic = [ "dependencies",]
 
 [[project.authors]]
 name = "Dominic Davis-Foster"
