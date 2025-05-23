@@ -13,7 +13,6 @@ enable_conda: False
 python_deploy_version: "3.6"
 
 python_versions:
-  - 3.6
   - 3.7
   - 3.8
 

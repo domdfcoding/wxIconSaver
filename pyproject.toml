@@ -7,7 +7,7 @@ name = "wxIconSaver"
 version = "0.1.7"
 description = "wxPython GUI for saving icons to files."
 readme = "README.rst"
-requires-python = ">=3.6.1"
+requires-python = ">=3.7"
 keywords = [ "gui", "icons", "utility", "wxpython",]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -16,7 +16,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: Implementation :: CPython",
@@ -135,13 +134,13 @@ base-classifiers = [
     "Topic :: Utilities",
     "Typing :: Typed",
 ]
-python-versions = [ "3.6", "3.7", "3.8",]
+python-versions = [ "3.7", "3.8",]
 python-implementations = [ "CPython",]
 platforms = [ "Windows", "macOS", "Linux",]
 license-key = "GPL-3.0-or-later"
 
 [tool.mypy]
-python_version = "3.6"
+python_version = "3.7"
 namespace_packages = true
 check_untyped_defs = true
 warn_unused_ignores = true
