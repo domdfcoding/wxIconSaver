@@ -10,8 +10,6 @@ short_desc: 'wxPython GUI for saving icons to files.'
 enable_tests: False
 enable_conda: False
 
-python_deploy_version: "3.6"
-
 python_versions:
   - 3.7
   - 3.8
