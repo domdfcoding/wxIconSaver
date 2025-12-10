@@ -37,7 +37,7 @@ import enum
 import os
 
 # 3rd party
-import wx  # type: ignore
+import wx  # type: ignore[import-not-found]
 
 __all__ = ["BUILTIN_ICONS", "ART_PROVIDERS", "FileTypesEnum", "BitmapSaverFrame"]
 
@@ -152,7 +152,13 @@ class FileTypesEnum(enum.Enum):
 	def __init__(self, *vals):
 		pass
 
-	def __new__(cls, ftype, index, extension, filetype_string):  # noqa: D102
+	def __new__(  # noqa: D102
+			cls,
+			ftype: int,
+			index: int,
+			extension: str,
+			filetype_string: str,
+			) -> "FileTypesEnum":
 		obj = object.__new__(cls)
 		# index is canonical value
 		obj._value_ = index
@@ -162,10 +168,10 @@ class FileTypesEnum(enum.Enum):
 		obj.filetype_string = filetype_string
 		return obj
 
-	def __int__(self):
+	def __int__(self) -> int:
 		return self.ftype
 
-	def __repr__(self):
+	def __repr__(self) -> str:
 		return f'<{self.__class__.__qualname__}.{self._name_}: {f"{self.value}, {self.wildcard}, ftype={self.ftype}"}>'
 
 

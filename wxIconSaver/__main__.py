@@ -26,7 +26,7 @@ wxPython GUI for saving icons to files.
 #
 
 # 3rd party
-import wx  # type: ignore
+import wx  # type: ignore[import-not-found]
 
 # this package
 from wxIconSaver import BitmapSaverFrame
@@ -39,7 +39,7 @@ class BitmapSaver(wx.App):
 	The main application class.
 	"""
 
-	def OnInit(self):  # noqa: D102
+	def OnInit(self) -> bool:  # noqa: D102
 		self.frame = BitmapSaverFrame(None, wx.ID_ANY, '')
 		self.SetTopWindow(self.frame)
 		self.frame.Show()
@@ -49,7 +49,7 @@ class BitmapSaver(wx.App):
 # end of class BitmapSaver
 
 
-def main():  # noqa: D103
+def main() -> None:  # noqa: D103
 	app = BitmapSaver(0)
 	app.MainLoop()
 
