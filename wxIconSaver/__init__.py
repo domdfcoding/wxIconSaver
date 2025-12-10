@@ -153,12 +153,12 @@ class FileTypesEnum(enum.Enum):
 		pass
 
 	def __new__(  # noqa: D102
-			cls,
-			ftype: int,
-			index: int,
-			extension: str,
-			filetype_string: str,
-			) -> "FileTypesEnum":
+		cls,
+		ftype: int,
+		index: int,
+		extension: str,
+		filetype_string: str,
+		) -> "FileTypesEnum":
 		obj = object.__new__(cls)
 		# index is canonical value
 		obj._value_ = index
