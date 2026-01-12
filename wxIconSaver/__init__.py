@@ -116,7 +116,7 @@ ART_PROVIDERS = [
 		]
 
 
-class FileTypesEnum(enum.Enum):
+class FileTypesEnum(enum.Enum):  # noqa: PRM002
 	"""
 	An enumeration for supported filetypes.
 	"""
@@ -158,7 +158,7 @@ class FileTypesEnum(enum.Enum):
 		index: int,
 		extension: str,
 		filetype_string: str,
-		) -> "FileTypesEnum":
+	) -> "FileTypesEnum":
 		obj = object.__new__(cls)
 		# index is canonical value
 		obj._value_ = index
@@ -213,7 +213,8 @@ class BitmapSaverFrame(wx.Frame):
 
 		# begin wxGlade: BitmapSaverFrame.__init__
 		kwds["style"] = kwds.get(
-				"style", 0
+				"style",
+				0,
 				) | wx.CAPTION | wx.CLIP_CHILDREN | wx.CLOSE_BOX | wx.MINIMIZE_BOX | wx.SYSTEM_MENU
 		wx.Frame.__init__(self, *args, **kwds)
 		self.SetSize((467, 577))
@@ -309,7 +310,7 @@ class BitmapSaverFrame(wx.Frame):
 		# sizer_5.AddStretchSpacer()
 		self.preview_bitmap = preview_bitmap
 
-	def on_close(self, *events) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>
+	def on_close(self, *events) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>  # noqa: PRM002
 		"""
 		Close the window.
 		"""
@@ -352,7 +353,7 @@ class BitmapSaverFrame(wx.Frame):
 
 		event.Skip()
 
-	def update_preview(self, *events) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>
+	def update_preview(self, *events) -> None:  # wxGlade: BitmapSaverFrame.<event_handler>  # noqa: PRM002
 		"""
 		Update the preview image.
 		"""
@@ -369,7 +370,7 @@ class BitmapSaverFrame(wx.Frame):
 		self.filetype = FileTypesEnum(filetype_raw_index)
 
 		self.preview_bitmap.SetBitmap(
-				wx.ArtProvider.GetBitmap(self.icon, self.provider, wx.Size(self.size, self.size))
+				wx.ArtProvider.GetBitmap(self.icon, self.provider, wx.Size(self.size, self.size)),
 				)
 
 
