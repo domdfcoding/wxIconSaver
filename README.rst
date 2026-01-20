@@ -117,6 +117,6 @@ To install with ``pip``:
 
 .. code-block:: bash
 
-	$ python -m pip install wxIconSaver
+	$ python -m pip install wxiconsaver
 
 .. end installation

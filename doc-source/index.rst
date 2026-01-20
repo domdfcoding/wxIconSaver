@@ -118,6 +118,7 @@ Installation
 
 .. installation:: wxIconSaver
 	:pypi:
+	:pypi-name: wxiconsaver
 	:github:
 
 .. end installation
