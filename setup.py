@@ -45,4 +45,4 @@ setup(
 		py_modules=[],
 		)
 
-shutil.rmtree("wxIconSaver.egg-info", ignore_errors=True)
+shutil.rmtree("wxiconsaver.egg-info", ignore_errors=True)
