@@ -64,20 +64,20 @@ wxIconSaver
 	:target: https://www.codefactor.io/repository/github/domdfcoding/wxIconSaver
 	:alt: CodeFactor Grade
 
-.. |pypi-version| image:: https://img.shields.io/pypi/v/wxIconSaver
-	:target: https://pypi.org/project/wxIconSaver/
+.. |pypi-version| image:: https://img.shields.io/pypi/v/wxiconsaver
+	:target: https://pypi.org/project/wxiconsaver/
 	:alt: PyPI - Package Version
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/wxIconSaver?logo=python&logoColor=white
-	:target: https://pypi.org/project/wxIconSaver/
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/wxiconsaver?logo=python&logoColor=white
+	:target: https://pypi.org/project/wxiconsaver/
 	:alt: PyPI - Supported Python Versions
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/wxIconSaver
-	:target: https://pypi.org/project/wxIconSaver/
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/wxiconsaver
+	:target: https://pypi.org/project/wxiconsaver/
 	:alt: PyPI - Supported Implementations
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/wxIconSaver
-	:target: https://pypi.org/project/wxIconSaver/
+.. |wheel| image:: https://img.shields.io/pypi/wheel/wxiconsaver
+	:target: https://pypi.org/project/wxiconsaver/
 	:alt: PyPI - Wheel
 
 .. |license| image:: https://img.shields.io/github/license/domdfcoding/wxIconSaver
@@ -98,8 +98,8 @@ wxIconSaver
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
-.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wxIconSaver
-	:target: https://pypistats.org/packages/wxIconSaver
+.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wxiconsaver
+	:target: https://pypistats.org/packages/wxiconsaver
 	:alt: PyPI - Downloads
 
 .. end shields

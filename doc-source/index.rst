@@ -66,22 +66,22 @@ wxIconSaver
 		:alt: CodeFactor Grade
 
 	.. |pypi-version| pypi-shield::
-		:project: wxIconSaver
+		:project: wxiconsaver
 		:version:
 		:alt: PyPI - Package Version
 
 	.. |supported-versions| pypi-shield::
-		:project: wxIconSaver
+		:project: wxiconsaver
 		:py-versions:
 		:alt: PyPI - Supported Python Versions
 
 	.. |supported-implementations| pypi-shield::
-		:project: wxIconSaver
+		:project: wxiconsaver
 		:implementations:
 		:alt: PyPI - Supported Implementations
 
 	.. |wheel| pypi-shield::
-		:project: wxIconSaver
+		:project: wxiconsaver
 		:wheel:
 		:alt: PyPI - Wheel
 
@@ -105,7 +105,7 @@ wxIconSaver
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
-		:project: wxIconSaver
+		:project: wxiconsaver
 		:downloads: month
 		:alt: PyPI - Downloads
 

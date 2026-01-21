@@ -3,7 +3,7 @@ requires = [ "setuptools!=61.*,<=67.1.0,>=40.6.0", "wheel>=0.34.2",]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "wxIconSaver"
+name = "wxiconsaver"
 version = "0.1.7"
 description = "wxPython GUI for saving icons to files."
 readme = "README.rst"
@@ -142,6 +142,7 @@ python-versions = [ "3.7", "3.8", "3.9", "3.10", "3.11", "3.12",]
 python-implementations = [ "CPython",]
 platforms = [ "Windows", "macOS", "Linux",]
 license-key = "GPL-3.0-or-later"
+package = "wxIconSaver"
 
 [tool.mypy]
 python_version = "3.9"
